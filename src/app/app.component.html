@@ -1,0 +1,44 @@
+<div class="d-flex">
+  <div class="card" style="width: 18rem">
+    <img [src]="imagem1" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ nome }}
+      </h5>
+      <p class="card-text">A média do aluno foi {{ media }}</p>
+        <span *ngIf="media >= 7; else elseBlock" class="badge badge-success">Aprovado</span>
+        <ng-template #elseBlock >
+        <span class="badge badge-danger">Reprovado</span>
+        </ng-template>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem">
+    <img [src]="imagem2" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ nome2 }}
+      </h5>
+      <p class="card-text">A média do aluno foi {{ media2 }}</p>
+        <span *ngIf="media2 >= 7; else elseBlock" class="badge badge-success">Aprovado</span>
+        <ng-template #elseBlock >
+        <span class="badge badge-danger">Reprovado</span>
+        </ng-template>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem">
+    <img [src]="imagem3" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ nome3 }}
+      </h5>
+      <p class="card-text">A média do aluno foi {{ media3 }}</p>
+        <span *ngIf="media3 >= 7; else elseBlock" class="badge badge-success">Aprovado</span>
+        <ng-template #elseBlock >
+        <span class="badge badge-danger">Reprovado</span>
+        </ng-template>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
